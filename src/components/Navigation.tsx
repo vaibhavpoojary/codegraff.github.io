@@ -30,21 +30,21 @@ const Navigation = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
             {navItems.map((item) => (
               <Link
                 key={item.path}
                 to={item.path}
-                className={`text-sm font-medium transition-colors duration-200 ${
+                className={`text-sm font-medium transition-all duration-200 hover:scale-105 ${
                   isActive(item.path)
-                    ? "text-primary"
+                    ? "text-primary font-semibold"
                     : "text-muted-foreground hover:text-foreground"
                 }`}
               >
                 {item.name}
               </Link>
             ))}
-            <Button asChild variant="default" className="btn-gradient">
+            <Button asChild variant="default" className="btn-gradient btn-enhanced">
               <Link to="/contact">Get Started</Link>
             </Button>
           </div>
@@ -60,22 +60,22 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden py-4 space-y-4">
+          <div className="md:hidden py-4 space-y-4 border-t border-border/50 bg-background/95 backdrop-blur-sm">
             {navItems.map((item) => (
               <Link
                 key={item.path}
                 to={item.path}
-                className={`block py-2 text-sm font-medium transition-colors duration-200 ${
+                className={`block py-3 px-2 text-sm font-medium transition-all duration-200 rounded-md ${
                   isActive(item.path)
-                    ? "text-primary"
-                    : "text-muted-foreground"
+                    ? "text-primary bg-primary/10 font-semibold"
+                    : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
                 }`}
                 onClick={() => setIsOpen(false)}
               >
                 {item.name}
               </Link>
             ))}
-            <Button asChild variant="default" className="btn-gradient w-full">
+            <Button asChild variant="default" className="btn-gradient btn-enhanced w-full mt-4">
               <Link to="/contact">Get Started</Link>
             </Button>
           </div>

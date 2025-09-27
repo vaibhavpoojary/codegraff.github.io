@@ -9,24 +9,26 @@ interface ServiceCardProps {
 
 const ServiceCard = ({ icon: Icon, title, description, features }: ServiceCardProps) => {
   return (
-    <div className="card-elegant group cursor-pointer">
-      <div className="flex items-center space-x-4 mb-4">
-        <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-          <Icon className="w-6 h-6 text-primary-foreground" />
+    <div className="card-elegant group cursor-pointer h-full">
+      <div className="flex items-start space-x-4 mb-6">
+        <div className="w-14 h-14 bg-gradient-primary rounded-xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 flex-shrink-0">
+          <Icon className="w-7 h-7 text-primary-foreground" />
         </div>
-        <h3 className="text-xl font-semibold text-foreground">{title}</h3>
+        <div className="flex-1 min-w-0">
+          <h3 className="text-xl font-semibold text-foreground leading-tight">{title}</h3>
+        </div>
       </div>
       
-      <p className="text-muted-foreground mb-6 leading-relaxed">
+      <p className="text-muted-foreground mb-6 leading-relaxed text-sm md:text-base">
         {description}
       </p>
       
       {features && (
-        <ul className="space-y-2">
+        <ul className="space-y-3">
           {features.map((feature, index) => (
-            <li key={index} className="flex items-center space-x-2 text-sm text-muted-foreground">
-              <div className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0" />
-              <span>{feature}</span>
+            <li key={index} className="flex items-start space-x-3 text-sm text-muted-foreground">
+              <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0 mt-2" />
+              <span className="leading-relaxed">{feature}</span>
             </li>
           ))}
         </ul>

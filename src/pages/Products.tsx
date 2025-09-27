@@ -92,25 +92,25 @@ const Products = () => {
         subtitle="Discover our comprehensive suite of AI solutions designed to transform your business operations and drive innovation."
         primaryCTA={{ text: "Get Started", href: "/contact" }}
         secondaryCTA={{ text: "Schedule Demo", href: "/contact" }}
-        showPattern={false}
+        showPattern={true}
       />
 
       {/* Products Grid */}
       <section className="section-padding">
         <div className="container-padding">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+            <h2 className="heading-lg text-foreground mb-6">
               Our Product Suite
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            <p className="body-large text-muted-foreground max-w-3xl mx-auto">
               From intelligent chatbots to complex AI automation, we offer end-to-end solutions 
               that integrate seamlessly with your existing infrastructure.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          <div className="grid-responsive max-w-7xl mx-auto">
             {products.map((product, index) => (
-              <div key={index} className="animate-fade-up" style={{ animationDelay: `${index * 100}ms` }}>
+              <div key={index} className="animate-fade-up" style={{ animationDelay: `${index * 150}ms` }}>
                 <ServiceCard {...product} />
               </div>
             ))}
@@ -122,22 +122,22 @@ const Products = () => {
       <section className="section-padding bg-gradient-subtle">
         <div className="container-padding">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8">
+            <h2 className="heading-lg text-foreground mb-8">
               Cutting-Edge Technology Stack
             </h2>
-            <p className="text-xl text-muted-foreground mb-12">
+            <p className="body-large text-muted-foreground mb-12">
               We leverage the latest AI frameworks and cloud technologies to deliver 
               robust, scalable solutions that grow with your business.
             </p>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-8">
               {[
                 "OpenAI GPT-4", "LangChain", "Pinecone", "AWS", 
                 "React", "Next.js", "Python", "FastAPI",
                 "Docker", "Kubernetes", "PostgreSQL", "Redis"
               ].map((tech, index) => (
-                <div key={index} className="bg-background/50 backdrop-blur-sm rounded-lg p-4 border border-border hover:border-primary/50 transition-colors">
-                  <span className="text-sm font-medium text-foreground">{tech}</span>
+                <div key={index} className="bg-background/50 backdrop-blur-sm rounded-lg p-3 md:p-4 border border-border hover:border-primary/50 transition-all duration-200 hover:scale-105">
+                  <span className="text-xs md:text-sm font-medium text-foreground">{tech}</span>
                 </div>
               ))}
             </div>

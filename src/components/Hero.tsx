@@ -43,13 +43,13 @@ const Hero = ({
           </h1>
           
           {/* Subtitle */}
-          <p className="text-xl md:text-2xl text-muted-foreground font-light leading-relaxed max-w-3xl mx-auto">
+          <p className="body-large text-muted-foreground font-light max-w-3xl mx-auto">
             {subtitle}
           </p>
           
           {/* Description */}
           {description && (
-            <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
+            <p className="body-medium text-muted-foreground max-w-2xl mx-auto">
               {description}
             </p>
           )}
@@ -58,7 +58,7 @@ const Hero = ({
           {(primaryCTA || secondaryCTA) && (
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
               {primaryCTA && (
-                <Button asChild size="lg" className="btn-gradient text-lg px-8 py-6">
+                <Button asChild size="lg" className="btn-gradient btn-enhanced text-lg px-8 py-6">
                   <Link to={primaryCTA.href} className="flex items-center space-x-2">
                     <span>{primaryCTA.text}</span>
                     <ArrowRight size={20} />
@@ -66,7 +66,7 @@ const Hero = ({
                 </Button>
               )}
               {secondaryCTA && (
-                <Button asChild variant="outline" size="lg" className="text-lg px-8 py-6 border-2">
+                <Button asChild variant="outline" size="lg" className="text-lg px-8 py-6 border-2 hover:scale-105 transition-transform duration-200">
                   <Link to={secondaryCTA.href}>{secondaryCTA.text}</Link>
                 </Button>
               )}
