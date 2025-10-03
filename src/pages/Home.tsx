@@ -272,7 +272,7 @@ const Home = () => {
       <section className="section-padding bg-background">
         <div className="container-padding">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="max-w-4xl mx-auto">
               <div className="animate-fade-up">
                 <div className="inline-flex items-center space-x-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium border border-primary/20 mb-6">
                   <CheckCircle size={16} />
@@ -313,21 +313,6 @@ const Home = () => {
                 </div>
               </div>
 
-              <div className="relative animate-fade-up" style={{ animationDelay: '200ms' }}>
-                <div className="relative aspect-square bg-gradient-hero rounded-2xl overflow-hidden group">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-accent/20 to-primary/20 animate-pulse" />
-                  <div className="relative h-full flex flex-col items-center justify-center text-center text-primary-foreground p-8">
-                    <div className="mb-8 relative">
-                      <div className="absolute inset-0 bg-primary-foreground/10 rounded-full blur-3xl" />
-                      <Bot size={120} className="relative mx-auto opacity-90 animate-float" />
-                    </div>
-                    <h3 className="text-3xl font-bold mb-4">AI-Powered Innovation</h3>
-                    <p className="text-lg text-primary-foreground/80 max-w-sm">
-                      Building the future with intelligent automation and cutting-edge technology
-                    </p>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
