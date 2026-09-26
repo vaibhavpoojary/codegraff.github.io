@@ -3,6 +3,7 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import grafforaLogo from "@/assets/graffora-logo.webp.asset.json";
 
 export const navItems = [
   { name: "Home", path: "/" },
@@ -17,12 +18,15 @@ export const navItems = [
 export const Logo = ({ light = false }: { light?: boolean }) => (
   <span
     className={cn(
-      "block text-[2rem] font-semibold leading-none tracking-tight",
-      light ? "text-ink-foreground" : "text-foreground",
+      "inline-flex h-8 items-center overflow-hidden",
+      light && "rounded bg-background px-2 py-1 h-10",
     )}
-    aria-label="Graffora.ai"
   >
-    Graffora<span className="text-primary">.ai</span>
+    <img
+      src={grafforaLogo.url}
+      alt="Graffora.ai"
+      className="block h-full w-auto max-w-[min(55vw,245px)] object-contain"
+    />
   </span>
 );
 
