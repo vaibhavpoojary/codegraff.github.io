@@ -37,6 +37,23 @@ const About = () => (
         ))}
       </div>
     </Section>
+    <Section>
+      <SectionHeading eyebrow="Leadership" title="Founded by an engineer." />
+      <Reveal className="card-soft p-10 max-w-3xl mx-auto flex flex-col sm:flex-row items-start sm:items-center gap-8">
+        <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl bg-foreground text-background font-mono text-2xl tracking-tight">
+          VP
+        </div>
+        <div>
+          <p className="h3">Vaibhava Poojary</p>
+          <p className="text-primary font-mono text-sm mt-1">Founder &amp; Senior AI Engineer</p>
+          <p className="text-muted-foreground mt-3 leading-relaxed">
+            Based in Bangalore, India, Vaibhava leads CodeGraff's engineering — designing LLM, RAG
+            and agentic systems that move from prototype to production with enterprise-grade rigor.
+          </p>
+          <p className="text-muted-foreground text-sm mt-3">Bangalore, India</p>
+        </div>
+      </Reveal>
+    </Section>
     <BuildCTA />
   </>
 );
