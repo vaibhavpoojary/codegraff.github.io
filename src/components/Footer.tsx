@@ -28,7 +28,7 @@ const Footer = () => (
         </div>
       </div>
       <div className="mt-16 pt-8 border-t border-ink-border flex flex-col md:flex-row justify-between gap-4 text-xs text-ink-muted font-mono">
-        <p>© {new Date().getFullYear()} CodeGraff. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} Graffora.ai. All rights reserved.</p>
         <p>Built with enterprise engineering principles.</p>
       </div>
     </div>

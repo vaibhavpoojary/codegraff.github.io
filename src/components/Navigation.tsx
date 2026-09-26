@@ -3,8 +3,6 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import logo from "@/assets/codegraff-logo-v2.svg.asset.json";
-import logoLight from "@/assets/codegraff-logo-light-v2.svg.asset.json";
 
 export const navItems = [
   { name: "Home", path: "/" },
@@ -17,7 +15,15 @@ export const navItems = [
 ];
 
 export const Logo = ({ light = false }: { light?: boolean }) => (
-  <img src={`https://codegraff.lovable.app${light ? logoLight.url : logo.url}`} alt="CodeGraff.ai" className="block h-8 w-auto max-w-[min(55vw,245px)]" />
+  <span
+    className={cn(
+      "block text-[2rem] font-semibold leading-none tracking-tight",
+      light ? "text-ink-foreground" : "text-foreground",
+    )}
+    aria-label="Graffora.ai"
+  >
+    Graffora<span className="text-primary">.ai</span>
+  </span>
 );
 
 const Navigation = () => {
@@ -36,7 +42,7 @@ const Navigation = () => {
     <header className={cn("fixed top-0 inset-x-0 z-50 transition-all duration-500",
       open ? "bg-background border-b border-border shadow-card max-h-[100dvh] overflow-y-auto" : scrolled ? "bg-background/75 backdrop-blur-xl border-b border-border/70 shadow-card" : "bg-background/90 backdrop-blur-md border-b border-border/40")}>
       <div className="container-x flex items-center justify-between h-16">
-        <Link to="/" aria-label="CodeGraff home"><Logo /></Link>
+        <Link to="/" aria-label="Graffora.ai home"><Logo /></Link>
         <nav className="hidden lg:flex items-center gap-1">
           {navItems.map(i => (
             <NavLink key={i.path} to={i.path} end className={({ isActive }) => cn("px-3 py-2 text-sm rounded-full transition-colors", isActive ? "text-foreground font-medium" : "text-muted-foreground hover:text-foreground")}>
