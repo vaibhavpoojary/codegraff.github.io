@@ -1,0 +1,1 @@
+- [x] Replace the text logo with the uploaded Graffora.ai artwork in header and footer, without adding a favicon.
