@@ -7,7 +7,7 @@ const Footer = () => (
     <div className="container-x py-16 md:py-20">
       <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
         <div>
-          <Logo />
+          <Logo light />
           <p className="h3 mt-6 text-ink-foreground">Engineering Intelligence.</p>
           <p className="text-ink-muted mt-3 max-w-xs text-sm">AI product engineering for the Agentic era — from idea to production.</p>
         </div>

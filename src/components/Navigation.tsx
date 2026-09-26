@@ -3,6 +3,8 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import logo from "@/assets/codegraff-logo.svg.asset.json";
+import logoLight from "@/assets/codegraff-logo-light.svg.asset.json";
 
 export const navItems = [
   { name: "Home", path: "/" },
@@ -14,13 +16,8 @@ export const navItems = [
   { name: "Contact", path: "/contact" },
 ];
 
-export const Logo = () => (
-  <span className="flex items-center gap-2.5">
-    <span className="w-7 h-7 rounded-lg bg-foreground flex items-center justify-center">
-      <span className="w-2.5 h-2.5 rounded-sm bg-primary rotate-45" />
-    </span>
-    <span className="text-[17px] font-semibold tracking-tight">CodeGraff</span>
-  </span>
+export const Logo = ({ light = false }: { light?: boolean }) => (
+  <img src={`https://codegraff.lovable.app${light ? logoLight.url : logo.url}`} alt="CodeGraff.ai" className="block h-8 w-auto max-w-[min(55vw,245px)]" />
 );
 
 const Navigation = () => {
