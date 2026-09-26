@@ -15,11 +15,12 @@ export const navItems = [
   { name: "Contact", path: "/contact" },
 ];
 
-export const Logo = ({ light = false }: { light?: boolean }) => (
+export const Logo = ({ light = false, className }: { light?: boolean; className?: string }) => (
   <span
     className={cn(
       "inline-flex h-8 items-center overflow-hidden",
       light && "rounded bg-background px-2 py-1 h-10",
+      className,
     )}
   >
     <img
@@ -46,7 +47,7 @@ const Navigation = () => {
     <header className={cn("fixed top-0 inset-x-0 z-50 transition-all duration-500",
       open ? "bg-background border-b border-border shadow-card max-h-[100dvh] overflow-y-auto" : scrolled ? "bg-background/75 backdrop-blur-xl border-b border-border/70 shadow-card" : "bg-background/90 backdrop-blur-md border-b border-border/40")}>
       <div className="container-x flex items-center justify-between h-16">
-        <Link to="/" aria-label="Graffora.ai home"><Logo /></Link>
+        <Link to="/" aria-label="Graffora.ai home"><Logo className="mt-2" /></Link>
         <nav className="hidden lg:flex items-center gap-1">
           {navItems.map(i => (
             <NavLink key={i.path} to={i.path} end className={({ isActive }) => cn("px-3 py-2 text-sm rounded-full transition-colors", isActive ? "text-foreground font-medium" : "text-muted-foreground hover:text-foreground")}>
