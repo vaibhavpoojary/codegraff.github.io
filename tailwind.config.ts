@@ -14,10 +14,21 @@ export default {
     },
     extend: {
       fontFamily: {
-        'inter': ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'sans-serif'],
-        'sans': ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'sans-serif'],
+        sans: ['Geist', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
+        mono: ['"Geist Mono"', 'ui-monospace', 'SFMono-Regular', 'monospace'],
       },
       colors: {
+        soft: "hsl(var(--soft))",
+        success: "hsl(var(--success))",
+        warning: "hsl(var(--warning))",
+        ink: {
+          DEFAULT: "hsl(var(--ink))",
+          2: "hsl(var(--ink-2))",
+          3: "hsl(var(--ink-3))",
+          border: "hsl(var(--ink-border))",
+          foreground: "hsl(var(--ink-foreground))",
+          muted: "hsl(var(--ink-muted))",
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -63,13 +74,10 @@ export default {
         },
       },
       backgroundImage: {
-        'gradient-primary': 'var(--gradient-primary)',
         'gradient-accent': 'var(--gradient-accent)',
-        'gradient-hero': 'var(--gradient-hero)',
-        'gradient-subtle': 'var(--gradient-subtle)',
       },
       boxShadow: {
-        'elegant': 'var(--shadow-elegant)',
+        'lift': 'var(--shadow-lift)',
         'glow': 'var(--shadow-glow)',
         'card': 'var(--shadow-card)',
       },
@@ -79,6 +87,8 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
+        "fade-in": { "0%": { opacity: "0", transform: "translateY(8px)" }, "100%": { opacity: "1", transform: "none" } },
+        "scale-in": { "0%": { opacity: "0", transform: "scale(0.96)" }, "100%": { opacity: "1", transform: "none" } },
         "accordion-down": {
           from: {
             height: "0",
@@ -97,6 +107,8 @@ export default {
         },
       },
       animation: {
+        "fade-in": "fade-in 0.5s cubic-bezier(0.16,1,0.3,1)",
+        "scale-in": "scale-in 0.4s cubic-bezier(0.16,1,0.3,1)",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },

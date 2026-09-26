@@ -1,87 +1,71 @@
-import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+
+export const navItems = [
+  { name: "Home", path: "/" },
+  { name: "Products", path: "/products" },
+  { name: "Solutions", path: "/solutions" },
+  { name: "Services", path: "/services" },
+  { name: "Careers", path: "/careers" },
+  { name: "About", path: "/about" },
+  { name: "Contact", path: "/contact" },
+];
+
+export const Logo = () => (
+  <span className="flex items-center gap-2.5">
+    <span className="w-7 h-7 rounded-lg bg-foreground flex items-center justify-center">
+      <span className="w-2.5 h-2.5 rounded-sm bg-primary rotate-45" />
+    </span>
+    <span className="text-[17px] font-semibold tracking-tight">CodeGraff</span>
+  </span>
+);
 
 const Navigation = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const location = useLocation();
-  
-  const isActive = (path: string) => location.pathname === path;
-  
-  const navItems = [
-    { name: "Home", path: "/" },
-    { name: "Products", path: "/products" },
-    { name: "Careers", path: "/careers" },
-    { name: "About", path: "/about" },
-    { name: "Contact", path: "/contact" },
-  ];
+  const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const { pathname } = useLocation();
+
+  useEffect(() => { setOpen(false); window.scrollTo(0, 0); }, [pathname]);
+  useEffect(() => {
+    const f = () => setScrolled(window.scrollY > 12);
+    f(); window.addEventListener("scroll", f, { passive: true });
+    return () => window.removeEventListener("scroll", f);
+  }, []);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
-      <div className="container-padding">
-        <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-lg">C</span>
-            </div>
-            <span className="text-xl font-bold text-foreground">CodeGraff</span>
-          </Link>
-
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
-            {navItems.map((item) => (
-              <Link
-                key={item.path}
-                to={item.path}
-                className={`text-sm font-medium transition-all duration-200 hover:scale-105 ${
-                  isActive(item.path)
-                    ? "text-primary font-semibold"
-                    : "text-muted-foreground hover:text-foreground"
-                }`}
-              >
-                {item.name}
-              </Link>
-            ))}
-            <Button asChild variant="default" className="btn-gradient btn-enhanced">
-              <Link to="/contact">Get Started</Link>
-            </Button>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden p-2"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+    <header className={cn("fixed top-0 inset-x-0 z-50 transition-all duration-500",
+      scrolled || open ? "bg-background/75 backdrop-blur-xl border-b border-border/70 shadow-card" : "bg-background/90 backdrop-blur-md border-b border-border/40")}>
+      <div className="container-x flex items-center justify-between h-16">
+        <Link to="/" aria-label="CodeGraff home"><Logo /></Link>
+        <nav className="hidden lg:flex items-center gap-1">
+          {navItems.map(i => (
+            <NavLink key={i.path} to={i.path} end className={({ isActive }) => cn("px-3 py-2 text-sm rounded-full transition-colors", isActive ? "text-foreground font-medium" : "text-muted-foreground hover:text-foreground")}>
+              {i.name}
+            </NavLink>
+          ))}
+        </nav>
+        <div className="hidden lg:block">
+          <Button asChild size="sm" className="rounded-full px-5"><Link to="/contact">Build With Us</Link></Button>
         </div>
-
-        {/* Mobile Navigation */}
-        {isOpen && (
-          <div className="md:hidden py-4 space-y-4 border-t border-border/50 bg-background/95 backdrop-blur-sm">
-            {navItems.map((item) => (
-              <Link
-                key={item.path}
-                to={item.path}
-                className={`block py-3 px-2 text-sm font-medium transition-all duration-200 rounded-md ${
-                  isActive(item.path)
-                    ? "text-primary bg-primary/10 font-semibold"
-                    : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
-                }`}
-                onClick={() => setIsOpen(false)}
-              >
-                {item.name}
-              </Link>
-            ))}
-            <Button asChild variant="default" className="btn-gradient btn-enhanced w-full mt-4">
-              <Link to="/contact">Get Started</Link>
-            </Button>
-          </div>
-        )}
+        <button className="lg:hidden p-2 -mr-2" aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open} onClick={() => setOpen(!open)}>
+          {open ? <X size={22} /> : <Menu size={22} />}
+        </button>
       </div>
-    </nav>
+      <div className={cn("lg:hidden overflow-hidden transition-all duration-500", open ? "max-h-[520px] opacity-100" : "max-h-0 opacity-0")}>
+        <nav className="container-x pb-6 pt-2 flex flex-col">
+          {navItems.map((i, idx) => (
+            <NavLink key={i.path} to={i.path} end style={{ transitionDelay: `${idx * 30}ms` }}
+              className={({ isActive }) => cn("py-3 text-2xl font-medium tracking-tight border-b border-border/60 transition-all", open ? "translate-y-0 opacity-100" : "-translate-y-2 opacity-0", isActive ? "text-foreground" : "text-muted-foreground")}>
+              {i.name}
+            </NavLink>
+          ))}
+          <Button asChild className="rounded-full mt-6 h-12"><Link to="/contact">Build With Us</Link></Button>
+        </nav>
+      </div>
+    </header>
   );
 };
 
