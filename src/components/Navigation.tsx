@@ -23,7 +23,7 @@ export const Logo = ({ light = false }: { light?: boolean }) => (
     )}
   >
     <img
-      src={grafforaLogo.url}
+      src={`https://codegraff.lovable.app${grafforaLogo.url}`}
       alt="Graffora.ai"
       className="block h-full w-auto max-w-[min(55vw,245px)] object-contain"
     />
