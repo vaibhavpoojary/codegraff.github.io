@@ -15,14 +15,14 @@ const AgentNetwork = () => (
       <circle cx="50" cy="50" r="42" fill="none" stroke="hsl(var(--ink-border))" strokeWidth="0.2" strokeDasharray="1 2" />
     </svg>
     {nodes.map((n, i) => (
-      <div key={n.l} className="absolute -translate-x-1/2 -translate-y-1/2 float-slow" style={{ left: `${n.x}%`, top: `${n.y}%`, animationDelay: `${i * 0.6}s` }}>
+      <div key={n.l} className="absolute -translate-x-1/2 -translate-y-1/2" style={{ left: `${n.x}%`, top: `${n.y}%` }}><div className="float-slow" style={{ animationDelay: `${i * 0.6}s` }}>
         <div className={n.main
           ? "px-4 py-2.5 rounded-xl bg-primary text-primary-foreground font-mono text-xs shadow-glow"
           : "px-3 py-1.5 rounded-lg bg-ink-2 border border-ink-border text-ink-foreground font-mono text-[11px] flex items-center gap-1.5"}>
           {!n.main && <span className="w-1.5 h-1.5 rounded-full bg-primary pulse-dot" style={{ animationDelay: `${i * 0.3}s` }} />}
           {n.l}
         </div>
-      </div>
+      </div></div>
     ))}
   </div>
 );
