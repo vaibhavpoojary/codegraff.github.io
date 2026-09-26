@@ -3,8 +3,8 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import logo from "@/assets/codegraff-logo.svg.asset.json";
-import logoLight from "@/assets/codegraff-logo-light.svg.asset.json";
+import logo from "@/assets/codegraff-logo-v2.svg.asset.json";
+import logoLight from "@/assets/codegraff-logo-light-v2.svg.asset.json";
 
 export const navItems = [
   { name: "Home", path: "/" },
