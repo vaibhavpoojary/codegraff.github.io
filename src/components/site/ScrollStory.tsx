@@ -25,8 +25,8 @@ const ScrollStory = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
   return (
-    <section ref={ref} className="dark-section relative" style={{ height: `${lines.length * 70}vh` }}>
-      <div className="sticky top-0 h-screen flex items-center overflow-hidden">
+    <section ref={ref} className="dark-section relative" style={{ height: `${lines.length * 60}svh` }}>
+      <div className="sticky top-0 h-[100svh] flex items-center overflow-hidden">
         <div className="glow-orb w-[600px] h-[600px] -right-40 top-1/4 opacity-40" />
         <div className="container-x relative">
           <p className="eyebrow mb-8">The shift</p>
