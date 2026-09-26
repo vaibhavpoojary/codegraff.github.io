@@ -17,7 +17,7 @@ export const navItems = [
 ];
 
 export const Logo = ({ light = false }: { light?: boolean }) => (
-  <img src={light ? logoLight.url : logo.url} alt="CodeGraff.ai" className="block h-8 w-auto max-w-[min(55vw,245px)]" />
+  <img src={`https://codegraff.lovable.app${light ? logoLight.url : logo.url}`} alt="CodeGraff.ai" className="block h-8 w-auto max-w-[min(55vw,245px)]" />
 );
 
 const Navigation = () => {
