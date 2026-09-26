@@ -37,7 +37,7 @@ const Navigation = () => {
 
   return (
     <header className={cn("fixed top-0 inset-x-0 z-50 transition-all duration-500",
-      scrolled || open ? "bg-background/75 backdrop-blur-xl border-b border-border/70" : "bg-background/0 border-b border-transparent")}>
+      scrolled || open ? "bg-background/75 backdrop-blur-xl border-b border-border/70 shadow-card" : "bg-background/90 backdrop-blur-md border-b border-border/40")}>
       <div className="container-x flex items-center justify-between h-16">
         <Link to="/" aria-label="CodeGraff home"><Logo /></Link>
         <nav className="hidden lg:flex items-center gap-1">
