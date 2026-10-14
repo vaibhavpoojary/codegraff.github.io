@@ -2,11 +2,10 @@ import { cn } from "@/lib/utils";
 
 const Logo = ({ light = false, className }: { light?: boolean; className?: string }) => (
   <span
-    aria-label="Graffora.ai"
-    className={cn("inline-flex items-center whitespace-nowrap font-sans text-[26px] font-semibold leading-none", className)}
+    aria-label="Hypothalamus Labs"
+    className={cn("brand-logo inline-flex items-center whitespace-nowrap text-[24px] font-semibold leading-none sm:text-[26px]", light ? "text-ink-foreground" : "text-foreground", className)}
   >
-    <span className={light ? "text-ink-foreground" : "text-foreground"}>graffora.</span>
-    <span className="text-primary">ai</span>
+    Hypothalamus Labs
   </span>
 );
 

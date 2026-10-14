@@ -16,7 +16,7 @@ const Contact = () => (
               { name: "name", label: "Name", required: true },
               { name: "email", label: "Work email", type: "email", required: true },
               { name: "company", label: "Company" },
-              { name: "interest", label: "Interested in", type: "select", options: ["AI Product Engineering", "Agentic AI", "RAG", "Generative AI", "AI Consulting", "Custom Software", "A Hypothalamous Labs product", "Other"] },
+              { name: "interest", label: "Interested in", type: "select", options: ["AI Product Engineering", "Agentic AI", "RAG", "Generative AI", "AI Consulting", "Custom Software", "A Hypothalamus Labs product", "Other"] },
               { name: "message", label: "What do you want to build?", type: "textarea", required: true },
             ]} />
         </Reveal>

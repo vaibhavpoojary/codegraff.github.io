@@ -138,7 +138,7 @@ const Home = () => (
 
     {/* WHY */}
     <Section>
-      <SectionHeading eyebrow="Why Hypothalamous Labs" title="Engineering AI Beyond the Prototype" />
+      <SectionHeading eyebrow="Why Hypothalamus Labs" title="Engineering AI Beyond the Prototype" />
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border rounded-2xl overflow-hidden border border-border">
         {why.map((w, i) => (
           <Reveal key={w.t} delay={(i % 3) * 100} className="bg-background p-8 group hover:bg-soft transition-colors">
