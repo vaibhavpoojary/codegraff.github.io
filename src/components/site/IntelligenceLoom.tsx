@@ -288,13 +288,13 @@ const IntelligenceLoom = () => {
   return (
     <section ref={rootRef} className="intelligence-loom" aria-labelledby={titleId}>
       <div className="loom-topline">
-        <span className="loom-wordmark"><span aria-hidden="true">[c/g]</span> INTELLIGENCE LOOM</span>
+        <span className="loom-wordmark"><span aria-hidden="true">[h/l]</span> INTELLIGENCE LOOM</span>
         <span className="loom-status"><span />{reducedMotion ? "STILL STUDY" : paused ? "PAUSED" : "IN MOTION"}</span>
       </div>
 
       <div className="loom-stage">
         <div className="loom-ambient" aria-hidden="true" />
-        <div className="loom-coordinate loom-coordinate-top" aria-hidden="true">CG—0{activeStage + 1}</div>
+        <div className="loom-coordinate loom-coordinate-top" aria-hidden="true">HL—0{activeStage + 1}</div>
         <div className="loom-coordinate loom-coordinate-side" aria-hidden="true">IDEAS INTO REALITY</div>
         <canvas
           ref={canvasRef}

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { Logo, navItems } from "./Navigation";
+import { navItems } from "./Navigation";
+import Logo from "./Logo";
 import { products } from "@/data/products";
 
 const Footer = () => (
@@ -22,13 +23,13 @@ const Footer = () => (
         <div>
           <p className="eyebrow text-ink-muted mb-4">Contact</p>
           <ul className="space-y-2.5 text-sm text-ink-muted">
-            <li><a className="hover:text-ink-foreground" href="mailto:hello@codegraff.com">hello@codegraff.com</a></li>
+            <li><Link className="hover:text-ink-foreground" to="/contact">Start a conversation</Link></li>
             <li><Link className="hover:text-ink-foreground" to="/careers">Internships</Link></li>
           </ul>
         </div>
       </div>
       <div className="mt-16 pt-8 border-t border-ink-border flex flex-col md:flex-row justify-between gap-4 text-xs text-ink-muted font-mono">
-        <p>© {new Date().getFullYear()} CodeGraff. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} Hypothalamous Labs. All rights reserved.</p>
         <p>Built with enterprise engineering principles.</p>
       </div>
     </div>

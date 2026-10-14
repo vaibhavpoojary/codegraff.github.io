@@ -1,4 +1,16 @@
-# Welcome to your Lovable project
+# Hypothalamous Labs
+
+AI product engineering for the Agentic era.
+
+## Brand assets
+
+The text wordmark uses outlined Geist lettering and is served locally, without a font or external image dependency. The spelling is **Hypothalamous Labs**.
+
+- [Dark wordmark](public/brand/hypothalamous-labs.svg) for light backgrounds.
+- [Light wordmark](public/brand/hypothalamous-labs-light.svg) for dark backgrounds.
+- [HL favicon](public/favicon.svg).
+
+`src/components/Logo.tsx` supplies the shared header and footer wordmark. Contact links currently use `/contact`; add a business email once it is confirmed.
 
 ## Project info
 

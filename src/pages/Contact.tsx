@@ -1,4 +1,4 @@
-import { Mail, Clock, Briefcase } from "lucide-react";
+import { MessageSquare, Clock, Briefcase } from "lucide-react";
 import PageHero from "@/components/site/PageHero";
 import { Section } from "@/components/site/Section";
 import Reveal from "@/components/site/Reveal";
@@ -16,13 +16,13 @@ const Contact = () => (
               { name: "name", label: "Name", required: true },
               { name: "email", label: "Work email", type: "email", required: true },
               { name: "company", label: "Company" },
-              { name: "interest", label: "Interested in", type: "select", options: ["AI Product Engineering", "Agentic AI", "RAG", "Generative AI", "AI Consulting", "Custom Software", "A CodeGraff product", "Other"] },
+              { name: "interest", label: "Interested in", type: "select", options: ["AI Product Engineering", "Agentic AI", "RAG", "Generative AI", "AI Consulting", "Custom Software", "A Hypothalamous Labs product", "Other"] },
               { name: "message", label: "What do you want to build?", type: "textarea", required: true },
             ]} />
         </Reveal>
         <Reveal delay={150} className="space-y-4">
           {[
-            { i: Mail, t: "Email", d: "hello@codegraff.com" },
+            { i: MessageSquare, t: "Start a conversation", d: "Share your product idea or project brief using the form." },
             { i: Clock, t: "Response time", d: "Within one business day" },
             { i: Briefcase, t: "Engagements", d: "Discovery sprints, MVPs, production builds and long-term partnerships" },
           ].map(x => (

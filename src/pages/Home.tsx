@@ -84,7 +84,7 @@ const Home = () => (
     <Section dark>
       <SectionHeading eyebrow="End-to-end lifecycle" title={<>From Idea to <span className="text-gradient">Intelligent Product</span></>} lead="You bring the problem. We handle every stage — strategy, architecture, engineering, evaluation and continuous evolution." />
       <Lifecycle />
-      <Reveal className="mt-14"><Button asChild size="lg" className="rounded-full h-12 px-7"><Link to="/contact">Build a Product With CodeGraff <ArrowRight className="ml-1" /></Link></Button></Reveal>
+      <Reveal className="mt-14"><Button asChild size="lg" className="rounded-full h-12 px-7"><Link to="/contact">Build With Us <ArrowRight className="ml-1" /></Link></Button></Reveal>
     </Section>
 
     {/* PRODUCTS */}
@@ -138,7 +138,7 @@ const Home = () => (
 
     {/* WHY */}
     <Section>
-      <SectionHeading eyebrow="Why CodeGraff" title="Engineering AI Beyond the Prototype" />
+      <SectionHeading eyebrow="Why Hypothalamous Labs" title="Engineering AI Beyond the Prototype" />
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border rounded-2xl overflow-hidden border border-border">
         {why.map((w, i) => (
           <Reveal key={w.t} delay={(i % 3) * 100} className="bg-background p-8 group hover:bg-soft transition-colors">

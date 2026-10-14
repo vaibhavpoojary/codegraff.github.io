@@ -7,7 +7,7 @@ const lines = [
   "Then, software learned.",
   "Now, software can reason.",
   "The next generation of software will act.",
-  "We build that generation at CodeGraff.",
+  "We build that generation at Hypothalamous Labs.",
 ];
 
 const ScrollStory = () => {

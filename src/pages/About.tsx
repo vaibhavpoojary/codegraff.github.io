@@ -12,7 +12,7 @@ const values = [
 
 const About = () => (
   <>
-    <PageHero eyebrow="About CodeGraff" title={<>We Build <span className="text-gradient">What's Next.</span></>} lead="CodeGraff is an AI product engineering company. We design and build intelligent products using LLMs, RAG, autonomous agents, modern software engineering and enterprise-grade architecture." />
+    <PageHero eyebrow="About Hypothalamous Labs" title={<>We Build <span className="text-gradient">What's Next.</span></>} lead="Hypothalamous Labs is an AI product engineering company. We design and build intelligent products using LLMs, RAG, autonomous agents, modern software engineering and enterprise-grade architecture." />
     <Section>
       <div className="grid md:grid-cols-2 gap-5">
         <Reveal className="card-soft p-10">

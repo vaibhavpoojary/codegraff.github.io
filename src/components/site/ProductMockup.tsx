@@ -17,7 +17,7 @@ const ProductMockup = ({ kind }: { kind: MockKind }) => {
   switch (kind) {
     case "rag":
       return (
-        <Frame title="knowledge.codegraff">
+        <Frame title="hypothalamous / knowledge">
           <div className="ml-auto max-w-[75%] rounded-lg bg-primary text-primary-foreground px-3 py-2">What is our refund policy for enterprise plans?</div>
           <div className="max-w-[85%] rounded-lg bg-ink-3 px-3 py-2 space-y-2">
             <p>Enterprise plans are refundable within 30 days of renewal, pro-rated monthly after that.</p>

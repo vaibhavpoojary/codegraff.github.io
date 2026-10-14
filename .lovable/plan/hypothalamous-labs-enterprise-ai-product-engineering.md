@@ -1,4 +1,4 @@
-# CodeGraff rebuild — Enterprise AI Product Engineering
+# Hypothalamous Labs rebuild — Enterprise AI Product Engineering
 
 Rebuild the whole website to follow the uploaded brief: a premium AI product company look (not an IT services template), with real product experiences, a scroll story, and an animated lifecycle.
 
@@ -9,8 +9,8 @@ Rebuild the whole website to follow the uploaded brief: a premium AI product com
 - No fake logos, testimonials or numbers. Use "Built with enterprise engineering principles" instead.
 
 ## Pages
-- **Home** (in the brief's order): hero "Building Intelligence Into Software." with an animated agent network and a demo terminal; scroll story ("Software is changing… will act"); "From Prompt to Action" agent flow; 12-step lifecycle (Discover → Improve) as an interactive timeline; featured products; YouTube Automator workflow demo; "Designed Beyond the Demo" architecture diagram; technology ecosystem; Why CodeGraff (6 principles); "Have an idea that sounds impossible? Good." call to action.
-- **Products**: large interactive cards for Enterprise RAG, Social AI Assistant, Social Advisor, YouTube Content Automator, AI Script Writer, and Agentic Automation Platform, each with a mock product screen. Plus a CodeGraff Labs section for future products.
+- **Home** (in the brief's order): hero "Building Intelligence Into Software." with an animated agent network and a demo terminal; scroll story ("Software is changing… will act"); "From Prompt to Action" agent flow; 12-step lifecycle (Discover → Improve) as an interactive timeline; featured products; YouTube Automator workflow demo; "Designed Beyond the Demo" architecture diagram; technology ecosystem; Why Hypothalamous Labs (6 principles); "Have an idea that sounds impossible? Good." call to action.
+- **Products**: large interactive cards for Enterprise RAG, Social AI Assistant, Social Advisor, YouTube Content Automator, AI Script Writer, and Agentic Automation Platform, each with a mock product screen. Plus a Hypothalamous Labs Research section for future products.
 - **Product detail** (one page per product): tagline, capabilities, workflow, mock screen, call to action.
 - **Solutions** (new page): solutions grouped by business need, drawn from the brief.
 - **Services** (new page): the 9 services (AI Product Engineering through AI Modernization).
