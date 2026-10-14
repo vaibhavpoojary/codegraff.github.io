@@ -17,7 +17,7 @@ const ProductDetail = () => {
   const others = products.filter(x => x.slug !== p.slug).slice(0, 3);
   return (
     <>
-      <PageHero eyebrow={`Hypothalamous Labs ${p.name}`} title={p.tagline} lead={p.description}>
+      <PageHero eyebrow={`Hypothalamus Labs ${p.name}`} title={p.tagline} lead={p.description}>
         <div className="flex flex-wrap items-center gap-4">
           <StatusBadge status={p.status} />
           <Button asChild className="rounded-full"><Link to="/contact">Request a demo <ArrowRight className="ml-1" /></Link></Button>
@@ -47,7 +47,7 @@ const ProductDetail = () => {
         </ol>
       </Section>
       <Section dark>
-        <SectionHeading eyebrow="More from Hypothalamous Labs" title="Other products" />
+        <SectionHeading eyebrow="More from Hypothalamus Labs" title="Other products" />
         <div className="grid md:grid-cols-3 gap-5">{others.map(o => <ProductCard key={o.slug} p={o} />)}</div>
       </Section>
       <BuildCTA />

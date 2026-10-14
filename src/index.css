@@ -68,6 +68,10 @@
 }
 
 @layer components {
+  .brand-logo {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+    letter-spacing: 0;
+  }
   .container-x { @apply px-5 sm:px-8 lg:px-12 max-w-7xl mx-auto w-full; }
   .section-y { @apply py-24 md:py-32; }
   .display {

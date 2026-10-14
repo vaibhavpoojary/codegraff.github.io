@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useInView } from "./Reveal";
 
 const lines = [
-  { t: "$ hypothalamous agent run --goal \"summarize Q3 support tickets\"", c: "text-ink-foreground" },
+  { t: "$ hypothalamus agent run --goal \"summarize Q3 support tickets\"", c: "text-ink-foreground" },
   { t: "→ planner      decomposing goal into 4 steps", c: "text-ink-muted" },
   { t: "→ retriever    searching 12,480 tickets (hybrid + rerank)", c: "text-ink-muted" },
   { t: "→ tool         crm.query(segment=\"enterprise\")", c: "text-primary" },
