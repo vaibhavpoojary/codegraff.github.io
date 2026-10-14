@@ -34,7 +34,7 @@ const Navigation = () => {
         <Link to="/" aria-label="Hypothalamous Labs home"><Logo /></Link>
         <nav className="hidden lg:flex items-center gap-1">
           {navItems.map(i => (
-            <NavLink key={i.path} to={i.path} end className={({ isActive }) => cn("px-3 py-2 text-sm rounded-full transition-colors", isActive ? "text-foreground font-medium" : "text-muted-foreground hover:text-foreground")}>
+            <NavLink key={i.path} to={i.path} end className={({ isActive }) => cn("px-2.5 py-2 text-sm rounded-full transition-colors", isActive ? "text-foreground font-medium" : "text-muted-foreground hover:text-foreground")}>
               {i.name}
             </NavLink>
           ))}

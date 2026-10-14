@@ -4,7 +4,7 @@ AI product engineering for the Agentic era.
 
 ## Brand assets
 
-The text wordmark uses outlined Geist lettering and is served locally, without a font or external image dependency. The spelling is **Hypothalamous Labs**.
+The single-line text wordmark uses outlined Space Grotesk lettering, with a semibold company name and a medium-weight blue "Labs" on the same baseline. It is served locally, without a font or external image dependency. The spelling is **Hypothalamous Labs**.
 
 - [Dark wordmark](public/brand/hypothalamous-labs.svg) for light backgrounds.
 - [Light wordmark](public/brand/hypothalamous-labs-light.svg) for dark backgrounds.

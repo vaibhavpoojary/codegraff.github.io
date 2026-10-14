@@ -4,9 +4,9 @@ const Logo = ({ light = false, className }: { light?: boolean; className?: strin
   <img
     src={`/brand/hypothalamous-labs${light ? "-light" : ""}.svg`}
     alt="Hypothalamous Labs"
-    width={238}
-    height={54}
-    className={cn("block h-auto w-[186px] max-w-full shrink-0 sm:w-[205px]", className)}
+    width={313}
+    height={38}
+    className={cn("block h-auto w-[212px] max-w-full shrink-0 sm:w-[240px]", className)}
   />
 );
 
