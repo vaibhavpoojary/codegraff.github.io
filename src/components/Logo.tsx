@@ -2,10 +2,11 @@ import { cn } from "@/lib/utils";
 
 const Logo = ({ light = false, className }: { light?: boolean; className?: string }) => (
   <span
-    aria-label="Hypothalamus Labs"
-    className={cn("brand-logo inline-flex items-center whitespace-nowrap text-[24px] font-semibold leading-none sm:text-[26px]", light ? "text-ink-foreground" : "text-foreground", className)}
+    role="img"
+    aria-label="HypothalamusLabs"
+    className={cn("brand-logo", light && "brand-logo--light", className)}
   >
-    Hypothalamus Labs
+    <span aria-hidden="true">Hypothalamus<span className="brand-logo-labs">Labs</span></span>
   </span>
 );
 

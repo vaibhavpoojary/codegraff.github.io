@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Hypothalamus Wordmark";
+  src: url("/brand/fonts/hypothalamus-wordmark-600.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Hypothalamus Wordmark";
+  src: url("/brand/fonts/hypothalamus-wordmark-700.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -69,9 +85,25 @@
 
 @layer components {
   .brand-logo {
-    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
-    letter-spacing: 0;
+    display: inline-block;
+    flex-shrink: 0;
+    padding-block: 0.08em;
+    font-family: "Hypothalamus Wordmark", "Geist", Arial, sans-serif;
+    font-size: clamp(23px, 2.4vw, 27px);
+    font-style: normal;
+    font-weight: 600;
+    font-synthesis: none;
+    line-height: 1.2;
+    letter-spacing: -0.045em;
+    white-space: nowrap;
+    color: #0866e9;
+    background: linear-gradient(100deg, #0866e9 0%, #4f54e8 55%, #8550ce 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
+  .brand-logo-labs { font-weight: 700; }
+  .brand-logo--light { background-image: linear-gradient(100deg, #75bcff 0%, #8d9dff 55%, #c89aff 100%); }
   .container-x { @apply px-5 sm:px-8 lg:px-12 max-w-7xl mx-auto w-full; }
   .section-y { @apply py-24 md:py-32; }
   .display {
@@ -137,4 +169,8 @@
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
   .reveal { opacity: 1; transform: none; }
+}
+
+@media (forced-colors: active) {
+  .brand-logo { background: none; color: CanvasText; -webkit-text-fill-color: CanvasText; }
 }

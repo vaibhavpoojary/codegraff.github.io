@@ -1,16 +1,16 @@
-# Hypothalamous Labs
+# HypothalamusLabs
 
 AI product engineering for the Agentic era.
 
 ## Brand assets
 
-The single-line text wordmark uses outlined Space Grotesk lettering, with a semibold company name and a medium-weight blue "Labs" on the same baseline. It is served locally, without a font or external image dependency. The spelling is **Hypothalamous Labs**.
+The single-line wordmark reads **HypothalamusLabs**, without a space. It uses Manrope from Google Fonts, with semibold lettering, a slightly heavier "Labs", and a cobalt-to-violet gradient that matches the UI. The footer uses a brighter gradient for dark backgrounds.
 
-- [Dark wordmark](public/brand/hypothalamous-labs.svg) for light backgrounds.
-- [Light wordmark](public/brand/hypothalamous-labs-light.svg) for dark backgrounds.
-- [HL favicon](public/favicon.svg).
+- [Gradient wordmark](public/brand/hypothalamus-labs.svg) for light backgrounds.
+- [Light gradient wordmark](public/brand/hypothalamus-labs-light.svg) for dark backgrounds.
+- [Font license](public/brand/fonts/OFL.txt).
 
-`src/components/Logo.tsx` supplies the shared header and footer wordmark. Contact links currently use `/contact`; add a business email once it is confirmed.
+`src/components/Logo.tsx` supplies the shared header and footer wordmark as text. Its two small font subsets are served locally; the SVG exports use outlined lettering and need no font installation. Contact links currently use `/contact`; add a business email once it is confirmed.
 
 ## Project info
 
