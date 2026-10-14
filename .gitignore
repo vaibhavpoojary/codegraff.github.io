@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# BMAD installation files
+/.agents/skills/bmad-*/
+/.github/agents/bmad-*.agent.md
+/_bmad/
