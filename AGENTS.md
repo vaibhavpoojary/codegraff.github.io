@@ -1,1 +1,0 @@
-Keep the text-only brand treatment in the shared Logo component so the header and footer stay visually consistent.

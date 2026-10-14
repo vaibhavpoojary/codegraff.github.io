@@ -1,2 +1,0 @@
-- [x] Replace the logo with the single-line lowercase Graffora.ai text treatment and no icon.
-- [ ] Use an Apple-style system font for the logo and verify it in the site header and footer.
