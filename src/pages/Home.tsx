@@ -3,7 +3,7 @@ import { ArrowRight, Brain, Database, Workflow, ShieldCheck, Activity, Layers, C
 import { Button } from "@/components/ui/button";
 import Reveal from "@/components/site/Reveal";
 import { Section, SectionHeading } from "@/components/site/Section";
-import AgentNetwork from "@/components/site/AgentNetwork";
+import IntelligenceLoom from "@/components/site/IntelligenceLoom";
 import Terminal from "@/components/site/Terminal";
 import ScrollStory from "@/components/site/ScrollStory";
 import Lifecycle from "@/components/site/Lifecycle";
@@ -45,7 +45,7 @@ const Home = () => (
   <>
     {/* HERO */}
     <section className="dark-section relative overflow-hidden pt-32 md:pt-40 pb-24 md:pb-32">
-      <div className="absolute inset-0 grid-bg" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_80%_40%,hsl(var(--primary)/0.06),transparent_55%)]" />
       <div className="glow-orb w-[800px] h-[800px] -top-60 left-1/2 -translate-x-1/2 opacity-50" />
       <div className="container-x relative grid lg:grid-cols-[1.15fr_1fr] gap-16 items-center">
         <div>
@@ -57,7 +57,7 @@ const Home = () => (
             <Button asChild size="lg" variant="ghost" className="rounded-full h-12 px-7 text-base border border-ink-border text-ink-foreground hover:bg-ink-3 hover:text-ink-foreground"><Link to="/contact">Start a Project</Link></Button>
           </Reveal>
         </div>
-        <Reveal delay={200}><AgentNetwork /></Reveal>
+        <Reveal delay={200} className="min-w-0"><IntelligenceLoom /></Reveal>
       </div>
     </section>
 
