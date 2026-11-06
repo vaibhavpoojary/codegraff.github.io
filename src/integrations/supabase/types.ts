@@ -14,7 +14,45 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      internship_applications: {
+        Row: {
+          about: string | null
+          college: string | null
+          created_at: string
+          email: string
+          id: string
+          name: string
+          portfolio: string | null
+          resume_name: string | null
+          resume_path: string | null
+          role: string
+        }
+        Insert: {
+          about?: string | null
+          college?: string | null
+          created_at?: string
+          email: string
+          id?: string
+          name: string
+          portfolio?: string | null
+          resume_name?: string | null
+          resume_path?: string | null
+          role: string
+        }
+        Update: {
+          about?: string | null
+          college?: string | null
+          created_at?: string
+          email?: string
+          id?: string
+          name?: string
+          portfolio?: string | null
+          resume_name?: string | null
+          resume_path?: string | null
+          role?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
