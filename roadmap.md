@@ -5,3 +5,5 @@
 - [x] Verify desktop and mobile presentation.
 - [x] Apply the defined white-and-cobalt palette across website and animated artwork.
 - [x] Verify palette readability and interactions on desktop and mobile.
+- [x] Redesign Products with clear tiles, search, categories, and visible product actions.
+- [x] Verify product discovery and navigation on desktop and mobile.
