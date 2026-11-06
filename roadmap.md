@@ -9,3 +9,6 @@
 - [x] Verify product discovery and navigation on desktop and mobile.
 - [ ] Restore the previous Products heading and redesign all six product detail pages.
 - [ ] Verify all product pages and their navigation on desktop and mobile.
+- [ ] Match Products heading sizing to the other pages.
+- [ ] Fix Careers overlaps and add résumé upload to applications.
+- [ ] Review Google and AI search visibility, fix evidenced issues, and identify realistic keyword targets.
