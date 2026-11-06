@@ -7,5 +7,10 @@
 - [x] Verify palette readability and interactions on desktop and mobile.
 - [x] Redesign Products with clear tiles, search, categories, and visible product actions.
 - [x] Verify product discovery and navigation on desktop and mobile.
-- [ ] Restore the previous Products heading and redesign all six product detail pages.
-- [ ] Verify all product pages and their navigation on desktop and mobile.
+- [x] Restore the previous Products heading and redesign all six product detail pages.
+- [x] Verify all product pages and their navigation on desktop and mobile.
+- [x] Match Products heading sizing to the other pages.
+- [x] Fix Careers overlaps and add résumé upload to applications.
+- [x] Review search foundations and identify realistic keyword targets.
+- [ ] Fix the missing sitemap after SEO review approval; preserve the deliberately icon-free branding.
+- [ ] Verify Google indexing and current rankings — blocked by unavailable Search Console access.

@@ -1,0 +1,1 @@
+export const internshipRoles = ["AI Engineering Intern", "Generative AI Intern", "Agentic AI Intern", "Full Stack Engineering Intern", "Frontend Engineering Intern", "Backend Engineering Intern", "AI Research Intern", "Product Design Intern"];

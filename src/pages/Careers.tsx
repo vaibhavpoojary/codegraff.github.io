@@ -1,9 +1,10 @@
 import PageHero from "@/components/site/PageHero";
 import { Section, SectionHeading } from "@/components/site/Section";
 import Reveal from "@/components/site/Reveal";
-import DemoForm from "@/components/site/DemoForm";
+import InternshipForm from "@/components/site/InternshipForm";
+import { internshipRoles } from "@/data/internships";
 
-const roles = ["AI Engineering Intern", "Generative AI Intern", "Agentic AI Intern", "Full Stack Engineering Intern", "Frontend Engineering Intern", "Backend Engineering Intern", "AI Research Intern", "Product Design Intern"];
+const roles = internshipRoles;
 const learn = ["LLMs", "RAG", "Agents", "Python", "React", "APIs", "Databases", "Cloud", "Product engineering", "Software architecture", "Testing"];
 
 const Careers = () => (
@@ -23,21 +24,13 @@ const Careers = () => (
     <Section dark>
       <SectionHeading eyebrow="What you'll learn" title="Skills for the Agentic era" />
       <div className="flex flex-wrap gap-2.5">
-        {learn.map((l, i) => <Reveal key={l} delay={i * 50}><span className="px-5 py-2.5 rounded-full border border-ink-border bg-ink-2 font-mono text-sm">{l}</span></Reveal>)}
+        {learn.map((l, i) => <Reveal key={l} delay={i * 50}><span className="inline-flex px-5 py-2.5 rounded-md border border-border bg-soft text-sm">{l}</span></Reveal>)}
       </div>
     </Section>
-    <Section soft id="apply">
+    <Section soft id="apply" className="scroll-mt-20">
       <SectionHeading eyebrow="Apply" title="Apply for an internship" />
       <Reveal className="max-w-3xl">
-        <DemoForm submit="Submit application" success="We've received your application and will be in touch."
-          fields={[
-            { name: "name", label: "Name", required: true },
-            { name: "email", label: "Email", type: "email", required: true },
-            { name: "college", label: "College / University" },
-            { name: "role", label: "Internship track", type: "select", options: roles, required: true },
-            { name: "portfolio", label: "GitHub / Portfolio link", full: true },
-            { name: "about", label: "Tell us what you'd like to build", type: "textarea" },
-          ]} />
+        <InternshipForm />
       </Reveal>
     </Section>
   </>

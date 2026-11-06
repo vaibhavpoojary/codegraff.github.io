@@ -20,7 +20,7 @@ const Products = () => {
           <p className="text-sm font-medium text-primary">Hypothalamus Labs / Products</p>
           <div className="mt-4 flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <div className="max-w-2xl">
-              <h1 className="text-4xl font-semibold leading-tight md:text-5xl">Products designed <span className="text-gradient">around intelligence.</span></h1>
+              <h1 className="display">Products designed <span className="text-gradient">around intelligence.</span></h1>
               <p className="mt-4 max-w-xl text-base leading-relaxed text-muted-foreground">Technology products Hypothalamus Labs is building for an AI-native world — from enterprise knowledge to autonomous digital workers.</p>
             </div>
             <Button asChild className="h-11 self-start md:self-auto"><Link to="/contact">Talk to our team <ArrowRight /></Link></Button>
