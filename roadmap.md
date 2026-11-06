@@ -12,5 +12,5 @@
 - [x] Match Products heading sizing to the other pages.
 - [x] Fix Careers overlaps and add résumé upload to applications.
 - [x] Review search foundations and identify realistic keyword targets.
-- [ ] Fix the missing sitemap after SEO review approval; preserve the deliberately icon-free branding.
+- [x] Add the missing sitemap; preserve the deliberately icon-free branding. The sitemap reaches the live site on the next publish.
 - [ ] Verify Google indexing and current rankings — blocked by unavailable Search Console access.
