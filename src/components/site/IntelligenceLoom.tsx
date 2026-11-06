@@ -62,6 +62,8 @@ const IntelligenceLoom = () => {
     const context = canvas?.getContext("2d", { alpha: true });
     if (!canvas || !root || !context) return;
 
+    const theme = getComputedStyle(root);
+    const brandColor = (token: string, alpha: number) => `hsl(${theme.getPropertyValue(token).trim()} / ${alpha})`;
     const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
     let width = 0;
     let height = 0;
@@ -146,7 +148,7 @@ const IntelligenceLoom = () => {
         }
       }
 
-      context.globalCompositeOperation = "lighter";
+      context.globalCompositeOperation = "source-over";
       const trace = (points: ProjectedPoint[], start = 0, end = points.length) => {
         context.beginPath();
         context.moveTo(points[start].x, points[start].y);
@@ -156,7 +158,7 @@ const IntelligenceLoom = () => {
       // A broad, quiet bloom sits underneath the sharply drawn woven threads.
       for (let s = 0; s < STRANDS; s += 5) {
         trace(strands[s]);
-        context.strokeStyle = "rgba(25, 100, 255, 0.055)";
+        context.strokeStyle = brandColor("--primary", 0.04);
         context.lineWidth = 13 * unit;
         context.stroke();
       }
@@ -164,10 +166,9 @@ const IntelligenceLoom = () => {
       for (let s = 0; s < STRANDS; s++) {
         const points = strands[s];
         const color = context.createLinearGradient(0, height * 0.12, width * 0.8, height * 0.85);
-        color.addColorStop(0, "rgba(151, 218, 255, 0.82)");
-        color.addColorStop(0.32, "rgba(58, 156, 255, 0.76)");
-        color.addColorStop(0.67, "rgba(53, 92, 244, 0.63)");
-        color.addColorStop(1, "rgba(153, 129, 255, 0.8)");
+        color.addColorStop(0, brandColor("--gradient-dark", 0.85));
+        color.addColorStop(0.5, brandColor("--primary", 0.8));
+        color.addColorStop(1, brandColor("--gradient-light", 0.85));
         trace(points);
         context.strokeStyle = color;
         context.lineWidth = (s % 6 === 0 ? 1.05 : 0.6) * unit;
@@ -177,14 +178,14 @@ const IntelligenceLoom = () => {
         const head = ((time * 0.085 + s * 0.027) % 1) * (SAMPLES - 13);
         const start = Math.floor(head);
         trace(points, start, start + 12);
-        context.strokeStyle = s % 3 === 0 ? "rgba(179, 226, 255, 0.9)" : "rgba(96, 161, 255, 0.6)";
+        context.strokeStyle = s % 3 === 0 ? brandColor("--primary", 0.9) : brandColor("--gradient-light", 0.7);
         context.lineWidth = 1.25 * unit;
         context.stroke();
 
         for (let p = 0; p < SAMPLES; p += 7) {
           const point = points[p];
           const shimmer = 0.35 + (Math.sin(p * 0.6 + s * 0.7 - time * 1.7) + 1) * 0.2;
-          context.fillStyle = `rgba(154, 204, 255, ${shimmer})`;
+          context.fillStyle = brandColor("--primary", shimmer);
           const size = (s % 4 === 0 ? 1.25 : 0.8) * unit * point.scale;
           context.fillRect(point.x - size / 2, point.y - size / 2, size, size);
         }
@@ -200,7 +201,7 @@ const IntelligenceLoom = () => {
           context.beginPath();
           context.moveTo(a.x, a.y);
           context.lineTo(b.x, b.y);
-          context.strokeStyle = `rgba(111, 170, 255, ${0.1 + ((a.z + 130) / 260) * 0.16})`;
+          context.strokeStyle = brandColor("--primary", 0.1 + ((a.z + 130) / 260) * 0.16);
           context.stroke();
         }
       }

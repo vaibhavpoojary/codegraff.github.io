@@ -21,51 +21,53 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 0 0% 7%;
-    --soft: 240 11% 96%;
+    --foreground: 0 0% 6.6667%;
+    --soft: 221.5385 100% 97.4510%;
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 7%;
+    --card-foreground: 0 0% 6.6667%;
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 7%;
-    --primary: 214 100% 50%;
+    --popover-foreground: 0 0% 6.6667%;
+    --primary: 223.2941 100% 50%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 240 11% 96%;
-    --secondary-foreground: 0 0% 7%;
-    --muted: 240 11% 96%;
-    --muted-foreground: 240 2% 44%;
-    --accent: 258 70% 64%;
+    --secondary: 221.5385 100% 97.4510%;
+    --secondary-foreground: 0 0% 6.6667%;
+    --muted: 221.5385 100% 97.4510%;
+    --muted-foreground: 0 0% 27.0588%;
+    --accent: 223.2941 100% 50%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
-    --border: 240 6% 90%;
-    --input: 240 6% 88%;
-    --ring: 214 100% 50%;
+    --border: 216 28.3019% 89.6078%;
+    --input: 216 28.3019% 89.6078%;
+    --ring: 223.2941 100% 50%;
     --radius: 0.875rem;
 
-    /* Dark surfaces */
-    --ink: 0 0% 2%;
-    --ink-2: 0 0% 7%;
-    --ink-3: 0 0% 11%;
-    --ink-border: 0 0% 16%;
-    --ink-foreground: 240 11% 96%;
-    --ink-muted: 240 3% 62%;
+    /* Legacy surface roles follow the light brand palette throughout the site. */
+    --ink: var(--background);
+    --ink-2: var(--soft);
+    --ink-3: var(--border);
+    --ink-border: var(--border);
+    --ink-foreground: var(--foreground);
+    --ink-muted: var(--muted-foreground);
+    --gradient-dark: 227.2826 100% 36.0784%;
+    --gradient-light: 218.4270 100% 65.0980%;
     --success: 152 60% 45%;
     --warning: 38 92% 55%;
 
-    --gradient-accent: linear-gradient(120deg, hsl(var(--primary)), hsl(var(--accent)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--gradient-dark)) 0%, hsl(var(--primary)) 50%, hsl(var(--gradient-light)) 100%);
     --shadow-card: 0 1px 2px hsl(0 0% 0% / 0.04), 0 8px 24px -12px hsl(0 0% 0% / 0.12);
     --shadow-lift: 0 24px 60px -24px hsl(0 0% 0% / 0.25);
     --shadow-glow: 0 0 60px -10px hsl(var(--primary) / 0.45);
     --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: var(--background);
+    --sidebar-foreground: var(--foreground);
+    --sidebar-primary: var(--primary);
+    --sidebar-primary-foreground: var(--primary-foreground);
+    --sidebar-accent: var(--soft);
+    --sidebar-accent-foreground: var(--foreground);
+    --sidebar-border: var(--border);
+    --sidebar-ring: var(--ring);
   }
 }
 
@@ -96,14 +98,14 @@
     line-height: 1.2;
     letter-spacing: -0.045em;
     white-space: nowrap;
-    color: #0866e9;
-    background: linear-gradient(100deg, #0866e9 0%, #4f54e8 55%, #8550ce 100%);
+    color: hsl(var(--primary));
+    background: var(--gradient-accent);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
   .brand-logo-labs { font-weight: 700; }
-  .brand-logo--light { background-image: linear-gradient(100deg, #75bcff 0%, #8d9dff 55%, #c89aff 100%); }
+   .brand-logo--light { background-image: var(--gradient-accent); }
   .container-x { @apply px-5 sm:px-8 lg:px-12 max-w-7xl mx-auto w-full; }
   .section-y { @apply py-24 md:py-32; }
   .display {
@@ -146,9 +148,7 @@
     mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
   }
   .glow-orb {
-    @apply absolute rounded-full pointer-events-none;
-    background: radial-gradient(circle, hsl(var(--primary) / 0.35), transparent 65%);
-    filter: blur(40px);
+    display: none;
   }
 
   .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.9s var(--ease-out), transform 0.9s var(--ease-out); }
